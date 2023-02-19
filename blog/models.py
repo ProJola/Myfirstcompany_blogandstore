@@ -8,6 +8,7 @@ class Category(models.Model):
 
 class Article(models.Model):
     """ Describing articles on blog"""
+    title = models.CharField(max_length=30, unique=True)
     category = models.ForeignKey('blog.Category', on_delete=models.CASCADE)
     content = models.TextField()
     creation_datetime = models.DateTimeField(auto_now_add=True)
