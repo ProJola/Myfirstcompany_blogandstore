@@ -9,7 +9,7 @@ class Category(models.Model):
 class Article(models.Model):
     """ Describing articles on blog"""
     category = models.ForeignKey('blog.Category', on_delete=models.CASCADE)
-    article = models.TextField()
+    content = models.TextField()
     creation_datetime = models.DateTimeField(auto_now_add=True)
 
 
