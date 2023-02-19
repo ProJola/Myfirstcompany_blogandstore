@@ -1,5 +1,5 @@
 """
-WSGI config for blogandstore project.
+WSGI config for blogandstore_dous project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blogandstore.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blogandstore_dous.settings")
 
 application = get_wsgi_application()
