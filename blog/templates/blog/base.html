@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <My first company blog & store</title>
+    <link rel="stylesheet" href="{% static 'blog/css/main.css' %}">
+</head>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-wrapper">
+                <a class="page-logo" href="./index.html">
+                    <img src="logo.jpg" alt="logo">
+                </a>
+
+                <h1> My first company <br> <center >blog & store</center> </h1>
+
+                <nav>
+                    <a href="#">Blog</a>
+                    <a href="#">Sklep</a>
+                    <a href="#">Koszyk</a>
+                    <a href="#">Kontakt</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <a class="background-image" href="./index.html">
+                    <img src="background_photo.jpg" alt="logo">
+                </a>
+                <section><a href="{% url 'go_to_youtube' %}">Link</a></section>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-heading">O blogu</h2>
+
+                <div class="float-container">
+                    <p>Znajdziesz tu materiały dotyczące każdego etapu prowadzenia małego biznesu. Od jego planowania przez szukanie klientów aż po finanse i formalności.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-heading">Wybierz temat</h2>
+
+                <div class="section-heading-wrapper">
+                    <div class="box">
+                        <h3>
+                            <ul>
+                                {% for i in object_list %}
+                                <li> <a href="{% url 'categories_list' %}">{{ i.name }} </a></li>
+                                {% endfor %}
+                            </ul>
+                        </h3>
+                    </div>
+
+                    <div class="box">
+                        <h3>Kategoria 2</h3>
+                    </div>
+
+                    <div class="box">
+                        <h3>Kategoria 3</h3>
+                    </div>
+
+                    <div class="box">
+                        <h3>Kategoria 4</h3>
+                    </div>
+
+                    <div class="box">
+                        <h3>Kategoria 5</h3>
+                    </div>
+
+                    <div class="box">
+                        <h3>Kategoria 6</h3>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-heading">Dodatkowa treść</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-heading">Zapisz się do newslettera</h2>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="section-heading">Formularz kontaktowy</h2>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            Copyrights 2022
+        </div>
+    </footer>
+</body>
+</html>
