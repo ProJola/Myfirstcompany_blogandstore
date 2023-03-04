@@ -1,13 +1,8 @@
-{% block title %} <h1>Wybrana kategoria</h1> {% endblock %}
+{% extends 'blog/base.html' %}
 
 {% block main_content %}
-<h2> {{ category.name }} </h2>
-<ul>
-    {% for i in article.blog_set.all  %}
-    <li><a href="{% url 'articles_lis' category.id %}">{{ i.title }}</a></li>
-    {% endfor %}
-</ul>
-
+<div class="container">
+    <h2 class="section-heading">Wybrana kategoria </h2>
+    <h2> {{ category.name }} </h2>
+</div>
 {% endblock %}
-
-

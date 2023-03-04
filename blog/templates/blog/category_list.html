@@ -1,10 +1,12 @@
 {% extends 'blog/base.html' %}
 
 {% block main_content %}
-<h1> Wybierz temat </h1>
-<ul>
-    {% for i in object_list %}
-    <li> <a href="{% url 'categories_list' %}">{{ i.name }} </a></li>
-    {% endfor %}
-</ul>
+<div class="container">
+    <h2 class="section-heading">Wybierz temat</h2>
+    <div class="section-heading-wrapper">
+        {% for i in object_list %}
+        <div class="box"><h3><a href="{% url 'categories_detail' i.pk %}">{{ i.name }}</a></h3></div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
