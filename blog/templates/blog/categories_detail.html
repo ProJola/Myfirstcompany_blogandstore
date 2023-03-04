@@ -1,0 +1,12 @@
+{% block title %} <h1>Wybrana kategoria</h1> {% endblock %}
+
+{% block main_content %}
+<h2> {{ category.name }} </h2>
+<ul>
+    {% for i in object_list  %}
+    <li> <a href="{% url 'categories_detail' %}">{{ i.title }} </a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+

@@ -52,41 +52,14 @@
         <section>
             <div class="container">
                 <h2 class="section-heading">Wybierz temat</h2>
-
                 <div class="section-heading-wrapper">
-                    <div class="box">
-                        <h3>
-                            <ul>
-                                {% for i in object_list %}
-                                <li> <a href="{% url 'categories_list' %}">{{ i.name }} </a></li>
-                                {% endfor %}
-                            </ul>
-                        </h3>
-                    </div>
-
-                    <div class="box">
-                        <h3>Kategoria 2</h3>
-                    </div>
-
-                    <div class="box">
-                        <h3>Kategoria 3</h3>
-                    </div>
-
-                    <div class="box">
-                        <h3>Kategoria 4</h3>
-                    </div>
-
-                    <div class="box">
-                        <h3>Kategoria 5</h3>
-                    </div>
-
-                    <div class="box">
-                        <h3>Kategoria 6</h3>
-                    </div>
-
+                    {% for i in object_list %}
+                    <div class="box"><h3><a href="{% url 'categories_detail' i.pk %}">{{ i.name }}</a></h3></div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
+
 
         <section>
             <div class="container">
