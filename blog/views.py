@@ -31,7 +31,7 @@ class CategoriesDetailView(DetailView):
 
 
 class ArticlesListView(ListView):
-    template_name = 'blog/categories_detail.html'
+    template_name = 'blog/articles_list.html'
     model = Article
     fields = '__all__'
 

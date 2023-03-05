@@ -1,5 +1,4 @@
 
-
 * {
     box-sizing: border-box;
 }
@@ -8,14 +7,18 @@
     max-width: 1200px;
     padding: 0 10px;
     margin: 0 auto;
+
 }
 
+.container p{
+    font-size: 24px;
+}
 .page-header {
     padding: 20px 0;
 }
 
 .page-header nav a {
-    color: red;
+    color: black;
     text-decoration: none;
 }
 
@@ -53,13 +56,9 @@ section {
 }
 
 
-.hero-section a {
+.main-section a {
     position: center;
     width: 100%;
-}
-
-.float-container {
-    overflow: hidden;
 }
 
 
@@ -70,17 +69,12 @@ section {
 }
 
 
+
 .section-heading-wrapper {
     display: flex;
-    flex-direction: row;
-    gap: 30px;
-
-}
-
-
-.box {
-    border: 2px solid #000;
-
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 70px;
 }
 
 .box:last-child {
@@ -88,13 +82,19 @@ section {
 }
 
 .box h3 {
+    width: 345px;
+    height: 150px;
     margin: 0;
-    padding: 25px 15px;
+    padding: 60px 50px;
     background-color: black;
-    color: white;
     text-transform: uppercase;
+    text-align: center;
 }
 
+.box a {
+    color: white;
+    text-decoration: none;
+}
 
 
 @media screen and (max-width: 1200px) {

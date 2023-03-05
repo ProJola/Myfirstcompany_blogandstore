@@ -13,7 +13,7 @@
         <div class="container">
             <div class="page-header-wrapper">
                 <a class="page-logo" href="./index.html">
-                    <img src="logo.jpg" alt="logo">
+                    <img src="{% static 'blog/images/logo.jpg' %}" alt="logo" style="width: 90px; height: 90px">
                 </a>
 
                 <h1> My first company <br> <center >blog & store</center> </h1>
@@ -21,34 +21,27 @@
                 <nav>
                     <a href="#">Blog</a>
                     <a href="#">Sklep</a>
-                    <a href="#">Koszyk</a>
                     <a href="#">Kontakt</a>
+                    <a href="#">Zaloguj się</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="hero-section">
+        <section class="main-section">
             <div class="container">
-                <a class="background-image" href="./index.html">
-                    <img src="background_photo.jpg" alt="logo">
-                </a>
                 <section><a href="{% url 'go_to_youtube' %}">Link</a></section>
-
+                <img src="{% static 'blog/images/background_photo.jpg' %}" alt="background_photo" style="width: 100%">
             </div>
         </section>
 
         <section>
             <div class="container">
                 <h2 class="section-heading">O blogu</h2>
-
-                <div class="float-container">
-                    <p>Znajdziesz tu materiały dotyczące każdego etapu prowadzenia małego biznesu. Od jego planowania przez szukanie klientów aż po finanse i formalności.</p>
-                </div>
+                <p>Znajdziesz tu materiały dotyczące każdego etapu prowadzenia małego biznesu. Od jego planowania przez szukanie klientów aż po finanse i formalności.</p>
             </div>
         </section>
-
 
         <section>
             <div id="main_content">
@@ -56,7 +49,6 @@
                 {% endblock %}
             </div>
         </section>
-
 
         <section>
             <div class="container">
@@ -73,7 +65,7 @@
 
     <footer>
         <div class="container">
-            Copyrights 2022
+
         </div>
     </footer>
 </body>

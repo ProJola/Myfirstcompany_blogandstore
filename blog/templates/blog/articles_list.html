@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block main_content %}
+<div class="container">
+    <h2 class="section-heading">Wybierz artykuł</h2>
+        <ul>
+            {% for i in object_list %}
+            <li> <a href="{% url 'articles_list' %}">{{ i.name }} </a></li>
+            {% endfor %}
+        </ul>
+</div>
+{% endblock %}
